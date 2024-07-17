@@ -1,0 +1,151 @@
+.sec-common-contact {
+    position: relative;
+    background-image: url(../img/common/bg-contact.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    @include sp {
+      padding: 48rem 16rem;
+    }
+  
+    .wrapper {
+      width: min(90%, 800px);
+      background-color: var(--g-color-base);
+      border-radius: 8px;
+      padding: 40px 56px;
+      display: flex;
+      align-items: center;
+  
+      @include sp {
+        width: 100%;
+        padding: 21rem;
+        flex-direction: column;
+      }
+  
+      .sec-ttl {
+        margin-right: 48px;
+        padding-right: 48px;
+        border-right: 1px solid var(--g-color-border);
+  
+        @include sp {
+          display: flex;
+          margin-right: 0;
+          margin-bottom: 16rem;
+          padding-right: 0;
+          border-right: none;
+          border-bottom: 1px solid var(--g-color-border);
+          align-items: center;
+          width: 100%;
+        }
+  
+        .sec-ttl-en {
+          font-size: 56px;
+          margin-bottom: 8px;
+          letter-spacing: 2.5px;
+  
+          @include sp {
+            font-size: 24rem;
+          }
+        }
+  
+        .sec-ttl-desc {
+          color: var(--g-color-light-w);
+  
+          @include sp {
+            font-size: 12rem;
+            margin: 0;
+            padding: 0 0 5px 8px;
+          }
+        }
+      }
+  
+      ul {
+        @include sp {
+          width: 100%;
+        }
+      }
+  
+      li {
+        &:not(:last-child) {
+          margin-bottom: 0.5em;
+          @include sp {
+            margin-bottom: 16rem;
+          }
+        }
+        .text-link {
+          @include sp {
+            font-size: 14rem;
+          }
+          &::before {
+            @include sp {
+              width: 18rem;
+              height: 18rem;
+            }
+          }
+        }
+      }
+  
+     
+    }
+  }
+
+
+  /* お問い合わせ */
+#contact {
+  .kv-sub {
+    background-image: url(../img/sub-bg/bg-contact.webp);
+  }
+
+  .wrapper {
+    width: min(100%, 800px);
+  }
+
+  .list-flex {
+    display: flex;
+    border-bottom: 1px dotted var(--g-color-light-m);
+    padding: 2rem 0;
+
+    @include sp {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    &:first-child {
+      border-top: 1px dotted var(--g-color-light-m);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    dt {
+      width: 30%;
+      padding-top: 0.3rem;
+
+      @include sp {
+        width: 100%;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    dd {
+      flex: 1;
+
+      @include sp {
+         width: 100%;
+      }
+    }
+  }
+
+  .notice {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 40px 0;
+
+    a {
+      color: var(--g-color-light-b);
+      text-decoration: underline;
+      padding: 0 4px;
+    }
+  }
+}

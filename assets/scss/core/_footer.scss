@@ -1,0 +1,203 @@
+
+.footer-container {
+    background-image: url(../img/common/bg-noise.webp);
+    background-color: var(--g-color-green-l);
+    color: var(--g-color-base);
+  
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 32px 120px;
+  
+      @include sp {
+        text-align: center;
+        padding: 80rem 28rem 0;
+      }
+  
+      .footer-address {
+        width: 35%;
+        margin-right: 5%;
+  
+        @include sp {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+  
+        .footer-logo {
+          width: 220px;
+          margin-bottom: 32px;
+  
+          @include sp {
+            width: 220rem;
+            margin: 0 auto 24rem;
+          }
+        }
+  
+        address {
+          margin-bottom: 32px;
+  
+          @include sp {
+            text-align: center;
+            margin-bottom: 16rem;
+            font-size: 14rem;
+          }
+        }
+  
+        p {
+          .icon-top {
+            display: flex;
+            align-items: center;
+            color: var(--g-color-base);
+  
+            @include sp {
+              justify-content: center;
+              font-size: 14rem;
+            }
+  
+            &::before {
+              content: "";
+              width: 15px;
+              height: 18px;
+              display: block;
+              background-image: url(../img/common/icon-map.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              margin-right: 8px;
+              @include sp {
+                width: 15rem;
+                height: 18rem;
+                margin-right: 8rem;
+              }
+            }
+          }
+  
+          .icon-map {
+            margin-bottom: 16px;
+  
+            &::before {
+              background-image: url(../img/common/icon-map.svg);
+            }
+          }
+  
+          .icon-youtube {
+            &::before {
+              background-image: url(../img/common/icon-youtube.png);
+            }
+          }
+        }
+      }
+  
+      .footer-nav {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+  
+        @include sp {
+          width: 100%;
+          flex-direction: column;
+          border-top: 1px solid var(--g-color-base);
+          border-bottom: 1px solid var(--g-color-base);
+          padding: 24px 0;
+          text-align: left;
+        }
+  
+        .footer-nav-list {
+          width: 60%;
+  
+          @include sp {
+            width: 100%;
+            padding: 0 8px;
+          }
+  
+          &:nth-child(even) {
+            width: 30%;
+  
+            @include sp {
+              width: 100%;
+            }
+          }
+  
+          .footer-nav-item {
+            margin-bottom: 1em;
+            @include sp {
+              margin-bottom: 16rem;
+            }
+  
+            .footer-other-link {
+              border: 1px solid var(--g-color-base);
+              padding: 1.5em;
+              border-radius: 8px;
+              margin-top: 24px;
+  
+              @include sp {
+                padding: 16rem;
+              }
+              
+              &:not(:last-child) {
+                margin-bottom: 0.5em;
+  
+              }
+            }
+            
+            a {
+              color: var(--g-color-base);
+              @include sp {
+                font-size: 14rem;
+              }
+              &::before {
+                @include sp {
+                  margin-top: 8rem;
+                }
+              }
+            }
+  
+            .font-en {
+              font-size: 18px;
+              @include sp {
+                font-size: 18rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .copy-wrapper {
+      width: min(100%, 1060px);
+      padding: 1em 30px;
+      margin: 0 auto;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      @include sp {
+        width: 100%;
+        padding: 32px 24px 16px;
+        flex-direction: column-reverse;
+      }
+  
+      div {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+  
+        @include sp {
+          flex-direction: column;
+          margin-bottom: 16px;
+          gap: 1em;
+        }
+  
+        a {
+          color: var(--g-color-base);
+          display: block;
+  
+          img {
+            vertical-align: sub;
+          }
+        }
+      }
+    }
+  }

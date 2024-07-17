@@ -1,0 +1,233 @@
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+// さらに表示ボタン
+.btn a {
+  position: relative;
+  background-color: var(--g-color-yellow);
+  color: var(--g-color-base);
+  padding: 8px 48px 8px 40px;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 700;
+
+  @include sp {
+    padding: 4px 48px 4px 40px;
+    font-size: 1rem;
+  }
+
+  &::after {
+    @include sp {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid var(--g-color-base);
+      border-right: 2px solid var(--g-color-base);
+      transform: translateY(-50%) rotate(45deg);
+      position: absolute;
+      right: 16px;
+      top: 50%;
+    }
+  }
+}
+
+// セクションタイトル
+.sec-ttl {
+  .sec-ttl-en {
+    position: relative;
+    font-family: "Bree Serif", serif;
+    color: var(--g-color-blue);
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 5px;
+    display: block;
+    line-height: 1;
+    margin-bottom: 16px;
+
+    @include sp {
+      font-size: 56rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  .sec-ttl-desc {
+    margin-top: 24px;
+    font-weight: 500;
+  }
+}
+
+// パララックス
+.parallax {
+  width: 100%;
+  height: 500px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include sp {
+    height: 170rem;
+  }
+  &-wrap {
+    transform: translateY(-10%);
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.parallax01 {
+  .parallax-wrap {
+    background-image: url(../img/parallax/parallax01.webp);
+
+    @include sp {
+      background-image: url(../img/parallax/parallax01-sp.webp);
+    }
+  }
+}
+
+.parallax02 {
+  .parallax-wrap {
+    background-image: url(../img/parallax/parallax02.webp);
+    background-position-y: 30%;
+  }
+}
+
+.parallax03 {
+  .parallax-wrap {
+    background-image: url(../img/parallax/parallax03.webp);
+  }
+}
+
+.parallax04 {
+  .parallax-wrap {
+    background-image: url(../img/parallax/parallax04.webp);
+  }
+}
+
+.parallax05 {
+  .parallax-wrap {
+    transform: translate(0px, 0px);
+    width: auto;
+    background-image: url(../img/top/top-recruit-bg.webp);
+    background-position: top !important;
+    background-size: contain;
+    @include sp {
+      background-image: url(../img/top/top-recruit-bg_sp.webp);
+    }
+  }
+}
+
+.kv-sub {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+
+  @include sp {
+    min-height: 210px;
+  }
+}
+
+// 下層ページタイトル
+.page-ttl {
+  color: var(--g-color-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  .page-ttl-en {
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 3.2px;
+    display: block;
+
+    @include sp {
+      font-size: 32px;
+    }
+  }
+
+  .page-ttl-ja {
+    font-size: 20px;
+    font-weight: 700;
+
+    @include sp {
+      font-size: 14px;
+    }
+  }
+}
+
+.control-button {
+  width: 20px; /* 画像のサイズに合わせて調整 */
+  height: 20px; /* 画像のサイズに合わせて調整 */
+  cursor: pointer;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid var(--g-color-base);
+  padding: 12px 20px;
+  border-radius: 4px;
+  outline: none;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+
+// テキストリンク（一般）
+.text-link {
+  display: inline-flex;
+  align-items: flex-start;
+  color: var(--g-color-light-b);
+  flex: 1;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 8px;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+}
+
+// テキストリンク（ネイビー）
+.text-link.navy {
+  &::before {
+    background-image: url(../img/common/icon-arrow-blue.svg);
+  }
+}
+
+// テキストリンク（ブルー）
+.text-link.blue {
+  &::before {
+    background-image: url(../img/common/icon-arrow-navy.svg);
+  }
+}
+
+// テキストリンク（ホワイト）
+.text-link.white {
+  &::before {
+    background-image: url(../img/common/icon-arrow-white.svg);
+  }
+}

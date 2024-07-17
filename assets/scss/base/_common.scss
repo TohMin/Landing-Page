@@ -1,0 +1,206 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+ruby,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+fieldset,
+legend,
+label,
+header,
+footer,
+hgroup,
+menu,
+nav,
+main,
+article,
+section,
+aside,
+details,
+figure,
+figcaption,
+canvas,
+embed,
+output,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: bottom;
+}
+
+header,
+footer,
+hgroup,
+menu,
+nav,
+main,
+article,
+section,
+aside,
+details,
+figure,
+figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+hr {
+  display: none;
+}
+
+address,
+em {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* Fonts
+---------------------------------------------------*/
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック",
+    "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック",
+    "MS PGothic", Sans-Serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  @include sp {
+    font-size: calc(2 / 768 * 100vw);
+  }
+}
+
+body {
+  font-family: $font-zen;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  font-size: clamp(
+    0.875rem,
+    0.823rem + 0.22vw,
+    1rem
+  ); /*14-16px min375-max1280*/
+  font-feature-settings: "palt";
+  position: relative;
+  background-color: --g-color-base;
+}
+
+a,
+p,
+button,
+li,
+dd,
+dt,
+address,
+span {
+  @include sp {
+    font-size: 12rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+img {
+  height: auto;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

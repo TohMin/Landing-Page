@@ -1,0 +1,15 @@
+<svg id="shape_nayami" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="196" height="196" viewBox="0 0 196 196">
+  <defs>
+    <filter id="楕円形_17" x="0" y="0" width="196" height="196" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#1ca8ea" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#楕円形_17)">
+    <circle id="楕円形_17-2" data-name="楕円形 17" cx="95" cy="95" r="95" fill="#fff"/>
+  </g>
+  <path id="パス_248" data-name="パス 248" d="M45.807,106.227H69.36V129.78H45.807ZM17.13,45.164A41.247,41.247,0,1,1,57.583,94.45H45.807V70.9H57.583A17.652,17.652,0,1,0,40.271,49.757Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 57.043, 11.978)" fill="#e5f5fd"/>
+</svg>

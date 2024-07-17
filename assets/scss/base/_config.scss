@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Zen+Maru+Gothic&display=swap");
+/* Reset CSS - 2021.09
+---------------------------------------------------*/
+
+@mixin sp {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+:root{
+    --g-padding-s: 36rem;
+    --g-padding-m: 108rem;
+    --g-padding-l: 180rem;
+    --g-color-base: #fff;
+    --g-color-bg: #faf6f0;
+    --g-color-purple: #5c5fa0;
+    --g-color-blue: #2c2f77;
+    --g-color-orange: #ef6400;
+    --g-color-red: #D33333;
+    --g-color-green-l: #6fa5b6;
+    --g-color-green-b: #2c85bb;
+    --g-color-gray: #D2D6D7;
+    --g-color-yellow: #b9a459;
+    --g-color-border: #cccccc;
+    --g-color-black: #000;
+    --g-color-light-b: #333;
+    --g-color-light-m: #666;
+    --g-color-light-w: #999;
+    --g-color-light-l: #faf4e9;
+}
+
+$font-zen: "Zen Maru Gothic", serif;
+$font-en: 'Tazugane Gothic StdN';
+$font-mv: 'Noto Sans JP'
