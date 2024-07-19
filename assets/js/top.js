@@ -47,7 +47,7 @@ document.addEventListener('scroll', function() {
     if (scrollY <= 1500) {
         kv.style.display = 'block';
         const scale = 1 - (scrollY / 1500) * 0.5;
-        const translateX = 0 + (scrollY / 1500) * 50;
+        const translateX = 0 + (scrollY / 1500) * 75;
         kv.style.transform = `scale(${scale}) translateX(-${translateX}%)`;
         kv.style.left = '0';
     } else if (scrollY > 1500 && scrollY <= 4500) {
@@ -161,6 +161,7 @@ $(function(){
 
 	open.on('click',function(){	
 		container.addClass('active');
+    console.log('clicked');
 		return false;
 	});
 

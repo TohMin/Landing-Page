@@ -152,12 +152,17 @@ main.sub-page {
   width: 100%;
   z-index: 998;
   background-color: rgba($color: #000000, $alpha: 0.15);
+  transition: background-color 0.3s;
 
   @include sp {
     display: flex !important;
     justify-content: space-between;
     gap: 233px;
     padding: 8px 16px;
+  }
+
+  &.open-menu {
+    background-color: rgba($color: #000000, $alpha: 0);
   }
 
   .header-logo {
@@ -177,11 +182,13 @@ main.sub-page {
       position: relative;
       font-size: 16px;
       display: flex;
+      font-family: "Bree Serif", serif;
+      font-weight: 100;
       align-items: center;
-      padding: 7px 16px 7px 17px;
+      padding: 10px 16px 10px 16px;
       @include sp {
         font-size: 16rem;
-        padding: 7rem 16rem 7rem 17rem;
+        padding: 10rem 16rem 10rem 16rem;
       }
       &::before {
         content: "";
@@ -337,7 +344,7 @@ body.fixed {
 .sp_open {
   visibility: inherit;
   opacity: 1;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .sp-fixed {
@@ -349,10 +356,6 @@ body.fixed {
 }
 
 .body-fixd {
-  .header-contener {
-    background-color: rgb(217, 217, 217);
-  }
-
   .header-logo {
     opacity: 1;
     transition: all 0.3s;

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Zen+Maru+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 /* Reset CSS - 2021.09
 ---------------------------------------------------*/
 :root {
@@ -12,10 +13,10 @@
   --g-color-purple: #5c5fa0;
   --g-color-blue: #2c2f77;
   --g-color-orange: #ef6400;
-  --g-color-red: #D33333;
+  --g-color-red: #d33333;
   --g-color-green-l: #6fa5b6;
   --g-color-green-b: #2c85bb;
-  --g-color-gray: #D2D6D7;
+  --g-color-gray: #d2d6d7;
   --g-color-yellow: #b9a459;
   --g-color-border: #cccccc;
   --g-color-black: #000;
@@ -589,6 +590,7 @@ main.sub-page {
   width: 100%;
   z-index: 998;
   background-color: rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
 }
 @media screen and (max-width: 767px) {
   .header-container {
@@ -597,6 +599,9 @@ main.sub-page {
     gap: 233px;
     padding: 8px 16px;
   }
+}
+.header-container.open-menu {
+  background-color: rgba(0, 0, 0, 0);
 }
 .header-container .header-logo {
   width: 150px;
@@ -615,13 +620,15 @@ main.sub-page {
   position: relative;
   font-size: 16px;
   display: flex;
+  font-family: "Bree Serif", serif;
+  font-weight: 100;
   align-items: center;
-  padding: 7px 16px 7px 17px;
+  padding: 10px 16px 10px 16px;
 }
 @media screen and (max-width: 767px) {
   .header-container .header-btn .header_btn {
     font-size: 16rem;
-    padding: 7rem 16rem 7rem 17rem;
+    padding: 10rem 16rem 10rem 16rem;
   }
 }
 .header-container .header-btn .header_btn::before {
@@ -774,7 +781,7 @@ body.fixed {
 .sp_open {
   visibility: inherit;
   opacity: 1;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .sp-fixed {
@@ -785,9 +792,6 @@ body.fixed {
   z-index: 9999;
 }
 
-.body-fixd .header-contener {
-  background-color: rgb(217, 217, 217);
-}
 .body-fixd .header-logo {
   opacity: 1;
   transition: all 0.3s;
@@ -1133,7 +1137,7 @@ body.fixed {
   background-image: url(../img/common/bg-contact.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 @media screen and (max-width: 767px) {
   .sec-common-contact {
@@ -1348,7 +1352,7 @@ body.fixed {
   animation-delay: 2s;
   animation-fill-mode: forwards;
   transition: all 0.5s ease-in-out;
-  font-family: "Noto Sans JP";
+  font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .kv-inner .kv-text-contents .kv-text .kv-text-ja {
@@ -1429,7 +1433,7 @@ body.fixed {
   visibility: hidden;
   transition: 0.3s;
   box-sizing: border-box;
-  z-index: 10;
+  z-index: 999;
 }
 .modal-container iframe {
   width: 100%;
@@ -1441,7 +1445,7 @@ body.fixed {
   vertical-align: middle;
   height: 100%;
 }
-.modal-container:active {
+.modal-container.active {
   opacity: 1;
   visibility: visible;
 }
@@ -2857,6 +2861,10 @@ body.fixed {
     margin-bottom: 32rem;
     margin-top: 0rem;
   }
+}
+.sec-top-recruit .wrapper .recruit-text h3 span {
+  font-family: "Bree Serif", serif;
+  font-weight: 100;
 }
 @media screen and (max-width: 767px) {
   .sec-top-recruit .wrapper .recruit-text h3 span {
